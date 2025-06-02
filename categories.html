@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - CHINGS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'logo': ['"Playfair Display"', 'serif'],
+                        'sans': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="../index.html" class="flex items-center py-4 group">
+                            <div class="flex flex-col items-center">
+                                <span class="font-logo text-3xl text-blue-600 tracking-wider group-hover:text-blue-500 transition-colors">
+                                    CHINGS
+                                </span>
+                                <span class="text-[0.65rem] font-sans text-gray-500 tracking-[0.2em] uppercase -mt-1">
+                                    Fashion Store
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-4">
+                        <a href="../index.html" class="py-4 px-2 text-gray-500 hover:text-blue-500">Home</a>
+                        <a href="categories.html" class="py-4 px-2 text-blue-500 border-b-4 border-blue-500">Categories</a>
+                        <a href="about.html" class="py-4 px-2 text-gray-500 hover:text-blue-500">About Us</a>
+                        <a href="order.html" class="py-4 px-2 text-gray-500 hover:text-blue-500">Order</a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-3">
+                    <a href="cart.html" class="py-2 px-2 text-gray-500 hover:text-blue-500">Cart</a>
+                    <a href="account.html" class="py-2 px-2 font-medium text-white bg-blue-500 rounded hover:bg-blue-400">Account</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Categories Header -->
+    <div class="bg-white py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <h1 class="text-4xl font-bold text-gray-800">Shop by Category</h1>
+            <p class="text-gray-600 mt-2">Explore our collection of trendy fashion items</p>
+        </div>
+    </div>
+
+    <!-- Categories Grid -->
+    <div class="max-w-6xl mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Men's Fashion -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?w=400" 
+                     alt="Men's Fashion" 
+                     class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">Men's Fashion</h2>
+                    <p class="text-gray-600 mb-4">Stylish collection for men including shirts, pants, and accessories</p>
+                    <a href="#" class="inline-block bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">Shop Now</a>
+                </div>
+            </div>
+
+            <!-- Women's Fashion -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400" 
+                     alt="Women's Fashion" 
+                     class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">Women's Fashion</h2>
+                    <p class="text-gray-600 mb-4">Elegant dresses, tops, and trendy accessories for women</p>
+                    <a href="#" class="inline-block bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">Shop Now</a>
+                </div>
+            </div>
+
+            <!-- Kids Fashion -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1624454002302-36b824d7bd0a?w=400" 
+                     alt="Kids Fashion" 
+                     class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">Kids Fashion</h2>
+                    <p class="text-gray-600 mb-4">Comfortable and stylish clothing for children</p>
+                    <a href="#" class="inline-block bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold mb-2">CHINGS</h3>
+                    <p class="text-gray-400">Your Fashion Destination</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-2">Quick Links</h4>
+                    <ul class="text-gray-400">
+                        <li><a href="about.html" class="hover:text-white">About Us</a></li>
+                        <li><a href="categories.html" class="hover:text-white">Categories</a></li>
+                        <li><a href="order.html" class="hover:text-white">Order</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-400">
+                <p>&copy; 2025 CHINGS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
