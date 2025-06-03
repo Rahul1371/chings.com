@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account - CHINGS</title>
+    <title>Shop Categories - CHINGS</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <script>
@@ -20,6 +20,11 @@
     </script>
 </head>
 <body class="bg-gray-100">
+    <!-- Add this right after the opening body tag -->
+    <div class="fixed inset-0 -z-10 overflow-hidden">
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+    </div>
+
     <!-- Navigation -->
     <nav class="bg-white shadow-lg">
         <div class="max-w-6xl mx-auto px-4">
@@ -39,113 +44,184 @@
                     </div>
                     <div class="hidden md:flex items-center space-x-4">
                         <a href="../index.html" class="py-4 px-2 text-gray-500 hover:text-blue-500">Home</a>
-                        <a href="categories.html" class="py-4 px-2 text-gray-500 hover:text-blue-500">Categories</a>
+                        <a href="categories.html" class="py-4 px-2 text-blue-500 border-b-4 border-blue-500">Categories</a>
                         <a href="about.html" class="py-4 px-2 text-gray-500 hover:text-blue-500">About Us</a>
                         <a href="order.html" class="py-4 px-2 text-gray-500 hover:text-blue-500">Order</a>
                     </div>
                 </div>
                 <div class="hidden md:flex items-center space-x-3">
                     <a href="cart.html" class="py-2 px-2 text-gray-500 hover:text-blue-500">Cart</a>
-                    <a href="account.html" class="py-2 px-2 font-medium text-white bg-blue-500 rounded hover:bg-blue-400">Account</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Account Section -->
-    <div class="max-w-4xl mx-auto px-4 py-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Login Form -->
-            <div class="bg-white rounded-lg shadow-md p-8">
-                <h2 class="text-2xl font-bold text-gray-800 mb-6">Login</h2>
-                <form class="space-y-4">
-                    <div>
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
-                            Email Address
-                        </label>
-                        <input type="email" id="email" name="email" 
-                               class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
-                               required>
-                    </div>
-                    <div>
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
-                            Password
-                        </label>
-                        <input type="password" id="password" name="password" 
-                               class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
-                               required>
-                    </div>
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center">
-                            <input type="checkbox" id="remember" class="mr-2">
-                            <label for="remember" class="text-sm text-gray-600">Remember me</label>
-                        </div>
-                        <a href="#" class="text-sm text-blue-500 hover:text-blue-600">Forgot Password?</a>
-                    </div>
-                    <button type="submit" 
-                            class="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition">
-                        Login
-                    </button>
-                </form>
-            </div>
+    <!-- Category Header - Updated with new gradient and style -->
+    <div class="bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 py-16 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <svg class="absolute right-0 top-0 h-64 w-64 text-purple-400" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="8" fill="none" />
+            </svg>
+            <svg class="absolute -left-12 -bottom-12 h-96 w-96 text-indigo-400" viewBox="0 0 100 100">
+                <polygon points="0,100 100,0 100,100" fill="currentColor" opacity="0.2" />
+            </svg>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 relative">
+            <span class="inline-block px-4 py-1 rounded-full bg-indigo-100 text-indigo-700 text-sm font-medium mb-4">Explore Collections</span>
+            <h1 class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-pink-600 mb-4">Shop by Category</h1>
+            <p class="text-gray-600 text-lg max-w-xl">Discover the latest trends in fashion curated just for you</p>
+        </div>
+    </div>
 
-            <!-- Registration Form -->
-            <div class="bg-white rounded-lg shadow-md p-8">
-                <h2 class="text-2xl font-bold text-gray-800 mb-6">Create Account</h2>
-                <form class="space-y-4">
-                    <div class="grid grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="firstName">
-                                First Name
-                            </label>
-                            <input type="text" id="firstName" name="firstName" 
-                                   class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
-                                   required>
+    <!-- Add this before the Category Grid section -->
+    <div class="max-w-6xl mx-auto px-4 -mt-8 mb-12 relative z-10">
+        <div class="bg-white rounded-xl shadow-lg p-6 flex items-center justify-between">
+            <div class="flex items-center space-x-8">
+                <div class="text-center">
+                    <svg class="w-8 h-8 text-indigo-500 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a4 4 0 00-4-4H5.5A2.5 2.5 0 003 4.5v0A2.5 2.5 0 005.5 7H8m4 1v13m0-13h4.5A2.5 2.5 0 0019 4.5v0A2.5 2.5 0 0016.5 2H12"></path>
+                    </svg>
+                    <span class="block text-sm font-medium text-gray-700">Premium Quality</span>
+                </div>
+                <div class="text-center">
+                    <svg class="w-8 h-8 text-indigo-500 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                    </svg>
+                    <span class="block text-sm font-medium text-gray-700">Latest Designs</span>
+                </div>
+                <div class="text-center">
+                    <svg class="w-8 h-8 text-indigo-500 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span class="block text-sm font-medium text-gray-700">Best Prices</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category Grid - Updated with two columns -->
+    <div class="max-w-6xl mx-auto px-4 py-16">
+        <!-- Men's Collections -->
+        <div class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">Men's Collections</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Shirts -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1603252109360-909baaf261c7?w=500" 
+                             alt="Men's Shirts" 
+                             class="w-full h-64 object-cover transition duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <h3 class="text-xl font-bold text-white">Shirts</h3>
+                            <p class="text-gray-200 text-sm">Starting at ₹999</p>
                         </div>
-                        <div>
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
-                                Last Name
-                            </label>
-                            <input type="text" id="lastName" name="lastName" 
-                                   class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
-                                   required>
+                    </div>
+                </div>
+
+                <!-- T-Shirts -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=500" 
+                             alt="Men's T-Shirts" 
+                             class="w-full h-64 object-cover transition duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <h3 class="text-xl font-bold text-white">T-Shirts</h3>
+                            <p class="text-gray-200 text-sm">Starting at ₹499</p>
                         </div>
                     </div>
-                    <div>
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="regEmail">
-                            Email Address
-                        </label>
-                        <input type="email" id="regEmail" name="regEmail" 
-                               class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
-                               required>
+                </div>
+
+                <!-- Pants -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=500" 
+                             alt="Men's Pants" 
+                             class="w-full h-64 object-cover transition duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <h3 class="text-xl font-bold text-white">Pants</h3>
+                            <p class="text-gray-200 text-sm">Starting at ₹1299</p>
+                        </div>
                     </div>
-                    <div>
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="regPassword">
-                            Password
-                        </label>
-                        <input type="password" id="regPassword" name="regPassword" 
-                               class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
-                               required>
+                </div>
+
+                <!-- Shoes -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" 
+                             alt="Men's Shoes" 
+                             class="w-full h-64 object-cover transition duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <h3 class="text-xl font-bold text-white">Shoes</h3>
+                            <p class="text-gray-200 text-sm">Starting at ₹1999</p>
+                        </div>
                     </div>
-                    <div>
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="confirmPassword">
-                            Confirm Password
-                        </label>
-                        <input type="password" id="confirmPassword" name="confirmPassword" 
-                               class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
-                               required>
+                </div>
+            </div>
+        </div>
+
+        <!-- Women's Collections -->
+        <div>
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">Women's Collections</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Dresses -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=500" 
+                             alt="Women's Dresses" 
+                             class="w-full h-64 object-cover transition duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <h3 class="text-xl font-bold text-white">Dresses</h3>
+                            <p class="text-gray-200 text-sm">Starting at ₹1499</p>
+                        </div>
                     </div>
-                    <div class="flex items-center">
-                        <input type="checkbox" id="terms" class="mr-2" required>
-                        <label for="terms" class="text-sm text-gray-600">
-                            I agree to the <a href="#" class="text-blue-500 hover:text-blue-600">Terms & Conditions</a>
-                        </label>
+                </div>
+
+                <!-- Tops -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=500" 
+                             alt="Women's Tops" 
+                             class="w-full h-64 object-cover transition duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <h3 class="text-xl font-bold text-white">Tops</h3>
+                            <p class="text-gray-200 text-sm">Starting at ₹699</p>
+                        </div>
                     </div>
-                    <button type="submit" 
-                            class="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition">
-                        Create Account
-                    </button>
-                </form>
+                </div>
+
+                <!-- Pants -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=500" 
+                             alt="Women's Pants" 
+                             class="w-full h-64 object-cover transition duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <h3 class="text-xl font-bold text-white">Pants</h3>
+                            <p class="text-gray-200 text-sm">Starting at ₹1199</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shoes -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500" 
+                             alt="Women's Shoes" 
+                             class="w-full h-64 object-cover transition duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <h3 class="text-xl font-bold text-white">Shoes</h3>
+                            <p class="text-gray-200 text-sm">Starting at ₹1799</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -155,8 +231,15 @@
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between">
                 <div class="mb-4 md:mb-0">
-                    <h3 class="text-xl font-bold mb-2">CHINGS</h3>
-                    <p class="text-gray-400">Your Fashion Destination</p>
+                    <div class="flex flex-col">
+                        <span class="font-logo text-2xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-1">
+                            CHINGS
+                        </span>
+                        <span class="text-[0.65rem] font-sans text-gray-400 tracking-[0.2em] uppercase">
+                            Fashion Store
+                        </span>
+                        <p class="text-gray-400 mt-4">Your Fashion Destination</p>
+                    </div>
                 </div>
                 <div>
                     <h4 class="text-lg font-semibold mb-2">Quick Links</h4>
